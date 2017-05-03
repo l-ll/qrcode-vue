@@ -1,15 +1,9 @@
-# qrcode-vue
-qrcode vue logo
-
-```html
 <template>
   <div>
     <qrcode-vue :size="size" :value="value" :logo="logo"></qrcode-vue>
   </div>
 </template>
-```
 
-```javascript
 <script>
   import qrcodeVue from '../src/qrcode-vue'
   export default {
@@ -27,4 +21,3 @@ qrcode vue logo
     }
   }
 </script>
-```
