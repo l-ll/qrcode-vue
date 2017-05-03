@@ -1,0 +1,27 @@
+{
+  "name": "qrcode-vue",
+  "version": "1.0.0",
+  "description": "a vue qrcode base on qr.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l-ll/qrcode-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "qrcode",
+    "logo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l-ll/qrcode-vue/issues"
+  },
+  "homepage": "https://github.com/l-ll/qrcode-vue#readme",
+  "dependencies": {
+    "qr.js": "0.0.0"
+  }
+}
