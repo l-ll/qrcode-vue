@@ -1,6 +1,12 @@
 <template>
   <div>
-    <qrcode-vue :size="size" :value="value" :logo="logo"></qrcode-vue>
+    <qrcode-vue 
+      :size="size" 
+      :value="value" 
+      :logo="logo" 
+      :bgColor="bgColor" 
+      :fgColor="fgColor"
+    ></qrcode-vue>
   </div>
 </template>
 
