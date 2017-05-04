@@ -12,10 +12,12 @@
         type: Number
       },
       bgColor: {
-        type: String
+        type: String,
+        default: '#fff'
       },
       fgColor: {
-        type: String
+        type: String,
+        default: '#000'
       },
       value: {
         type: String
