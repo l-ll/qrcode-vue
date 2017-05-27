@@ -1,12 +1,18 @@
 <template>
   <div>
-    <canvas ref="canvas"></canvas>
+    <img :src="dataUrl">
+    <canvas ref="canvas" v-show="false"></canvas>
   </div>
 </template>
 
 <script>
   import qr from 'qr.js'
   export default {
+    data () {
+      return {
+        dataUrl: ''
+      }
+    },
     props: {
       size: {
         type: Number
@@ -53,6 +59,7 @@
             image.width = dwidth
             image.height = dheight
             ctx.drawImage(image, dx, dy, dwidth, dheight)
+            this.dataUrl = canvas.toDataURL()
           }
         }
       },
