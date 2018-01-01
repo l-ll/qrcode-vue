@@ -34,6 +34,9 @@
     },
     methods: {
       update () {
+        if (!this.value) {
+          return;
+        }
         const qrcode = qr(this.value)
         const canvas = this.$refs.canvas
         const ctx = canvas.getContext('2d')
@@ -70,6 +73,11 @@
     },
     mounted () {
       this.update()
-    }
+    },
+    watch: {
+      value(val, oldValue) {
+        this.update();
+      },
+    },
   }
 </script>
