@@ -51,6 +51,7 @@
         if (this.logo) {
           var image = document.createElement('img')
           image.src = this.logo
+          image.setAttribute("crossOrigin",'Anonymous')
           image.onload = () => {
             var dwidth = this.size * 0.2
             var dx = (this.size - dwidth) / 2
