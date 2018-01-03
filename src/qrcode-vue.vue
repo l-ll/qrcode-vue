@@ -34,6 +34,9 @@
     },
     methods: {
       update () {
+        if (!this.value) {
+          return;
+        }
         const qrcode = qr(this.value)
         const canvas = this.$refs.canvas
         const ctx = canvas.getContext('2d')
@@ -51,6 +54,7 @@
         if (this.logo) {
           var image = document.createElement('img')
           image.src = this.logo
+          image.setAttribute("crossOrigin",'Anonymous')
           image.onload = () => {
             var dwidth = this.size * 0.2
             var dx = (this.size - dwidth) / 2
@@ -69,6 +73,11 @@
     },
     mounted () {
       this.update()
-    }
+    },
+    watch: {
+      value(val, oldValue) {
+        this.update();
+      },
+    },
   }
 </script>
