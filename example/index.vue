@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <qrcode-vue 
-      :size="size" 
-      :value="value" 
-      :logo="logo" 
-      :bgColor="bgColor" 
-      :fgColor="fgColor"
-    ></qrcode-vue>
-  </div>
+  <qrcode-vue
+    :size="size"
+    :value="value"
+    :logo="logo"
+    :bgColor="bgColor"
+    :fgColor="fgColor"
+  ></qrcode-vue>
 </template>
 
 <script>

@@ -35,7 +35,7 @@
     methods: {
       update () {
         if (!this.value) {
-          return;
+          return
         }
         const qrcode = qr(this.value)
         const canvas = this.$refs.canvas
@@ -54,7 +54,7 @@
         if (this.logo) {
           var image = document.createElement('img')
           image.src = this.logo
-          image.setAttribute("crossOrigin",'Anonymous')
+          image.setAttribute('crossOrigin', 'Anonymous')
           image.onload = () => {
             var dwidth = this.size * 0.2
             var dx = (this.size - dwidth) / 2
@@ -65,6 +65,8 @@
             ctx.drawImage(image, dx, dy, dwidth, dheight)
             this.dataUrl = canvas.toDataURL()
           }
+        } else {
+          this.dataUrl = canvas.toDataURL()
         }
       },
       getPixelRatio (ctx) {
@@ -75,9 +77,9 @@
       this.update()
     },
     watch: {
-      value(val, oldValue) {
-        this.update();
-      },
-    },
+      value () {
+        this.update()
+      }
+    }
   }
 </script>
