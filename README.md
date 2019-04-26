@@ -1,14 +1,16 @@
 # qrcode-vue
 qrcode vue logo
 
+# examples
+
 ```html
 <template>
   <div>
-    <qrcode-vue 
-      :size="size" 
-      :value="value" 
-      :logo="logo" 
-      :bgColor="bgColor" 
+    <qrcode-vue
+      :size="size"
+      :value="value"
+      :logo="logo"
+      :bgColor="bgColor"
       :fgColor="fgColor"
     ></qrcode-vue>
   </div>
@@ -17,7 +19,7 @@ qrcode vue logo
 
 ```javascript
 <script>
-  import qrcodeVue from '../src/qrcode-vue'
+  import qrcodeVue from 'qrcode-vue'
   export default {
     data () {
       return {
@@ -34,3 +36,13 @@ qrcode vue logo
   }
 </script>
 ```
+# params
+
+| Param | Description |
+| ----- | ----------- |
+| size | img size |
+| bgColor | qrcode background color, default `#fff` |
+| fgColor | qrcode cell color, default `#000` |
+| value | value |
+| logo | logo |
+| showCanvas | display canvas replace img, default `false`  |
