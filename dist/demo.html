@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<title>qrcodeVue demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./qrcodeVue.umd.js"></script>
+
+<link rel="stylesheet" href="./qrcodeVue.css">
+
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: qrcodeVue
+  }
+}).$mount('#app')
+</script>

@@ -51,19 +51,19 @@
         qrcode.modules.forEach((row, rdx) => {
           row.forEach((cell, cdx) => {
             ctx.fillStyle = cell ? this.fgColor : this.bgColor
-            var w = (Math.ceil((cdx + 1) * size) - Math.floor(cdx * size))
+            let w = (Math.ceil((cdx + 1) * size) - Math.floor(cdx * size))
             ctx.fillRect(Math.round(cdx * size), Math.round(rdx * size), w, w)
           })
         })
         if (this.logo) {
-          var image = document.createElement('img')
+          let image = document.createElement('img')
           image.src = this.logo
           image.setAttribute('crossOrigin', 'Anonymous')
           image.onload = () => {
-            var dwidth = this.size * 0.2
-            var dx = (this.size - dwidth) / 2
-            var dheight = image.height / image.width * dwidth
-            var dy = (this.size - dheight) / 2
+            let dwidth = this.size * 0.2
+            let dx = (this.size - dwidth) / 2
+            let dheight = image.height / image.width * dwidth
+            let dy = (this.size - dheight) / 2
             image.width = dwidth
             image.height = dheight
             ctx.drawImage(image, dx, dy, dwidth, dheight)

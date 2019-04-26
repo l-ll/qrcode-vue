@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["qrcode-vue"] = factory();
+		exports["qrcodeVue"] = factory();
 	else
-		root["qrcode-vue"] = factory();
+		root["qrcodeVue"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
