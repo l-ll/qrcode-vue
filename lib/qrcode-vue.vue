@@ -1,7 +1,7 @@
 <template>
   <div>
     <img :src="dataUrl">
-    <canvas ref="canvas" v-show="false"></canvas>
+    <canvas ref="canvas" v-show="showCanvas"></canvas>
   </div>
 </template>
 
@@ -30,6 +30,10 @@
       },
       logo: {
         type: String
+      },
+      showCanvas: {
+        type: Boolean,
+        default: false
       }
     },
     methods: {
