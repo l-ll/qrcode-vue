@@ -1,3 +1,6 @@
 module.exports = {
-  productionSourceMap: false
+  productionSourceMap: false,
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/qrcode-vue/'
+    : '/'
 }
